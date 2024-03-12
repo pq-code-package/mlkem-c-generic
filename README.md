@@ -1,6 +1,5 @@
 [//]: # (SPDX-License-Identifier: CC-BY-4.0)
-[//]: # (TODO Customize project readme)
 
-# template-code
+# ML-KEM C Generic
 
-Template for creating code repositories, with basic file setup included
+The generic C implementation of ML-KEM from the `standard` branch of [pq-crystals/kyber](https://github.com/pq-crystals/kyber/tree/standard).
