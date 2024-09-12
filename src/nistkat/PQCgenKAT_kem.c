@@ -11,7 +11,7 @@ You are solely responsible for determining the appropriateness of using and dist
 #include <string.h>
 #include <ctype.h>
 #include "rng.h"
-#include "api.h"
+#include "../kem.h"
 
 #define	MAX_MARKER_LEN		50
 #define KAT_SUCCESS          0
