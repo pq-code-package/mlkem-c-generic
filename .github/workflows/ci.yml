@@ -1,0 +1,28 @@
+name: CI
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+permissions:
+  contents: read
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - runner: ubuntu-latest
+            name: 'ubuntu-latest x86-64'
+          - runner: macos-latest
+            name: 'MacOS (arm64)'
+          - runner: pqcp-arm64
+            name: 'ubuntu-latest (arm64)'
+    name: Build (${{ matrix.target.name }})
+    runs-on: ${{ matrix.target.runner }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: build
+        run: |
+          cd src && make all
