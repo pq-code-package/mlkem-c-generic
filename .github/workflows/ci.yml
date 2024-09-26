@@ -14,10 +14,6 @@ jobs:
         target:
           - runner: ubuntu-latest
             name: 'ubuntu-latest x86-64'
-          - runner: macos-latest
-            name: 'MacOS (arm64)'
-          - runner: pqcp-arm64
-            name: 'ubuntu-latest (arm64)'
     name: Build (${{ matrix.target.name }})
     runs-on: ${{ matrix.target.runner }}
     steps:
